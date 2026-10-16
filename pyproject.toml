@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "churn-analysis"
-version = "0.2.0"
+version = "1.0.0"
 description = "Customer churn prediction with gradient boosting, calibration, survival analysis and SHAP explanations"
 readme = "README.md"
 license = "MIT"
