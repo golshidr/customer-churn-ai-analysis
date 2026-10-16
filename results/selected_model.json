@@ -1,0 +1,9 @@
+{
+  "selected_model": "xgboost",
+  "best_tree_model": "xgboost",
+  "rule": "highest mean CV ROC-AUC",
+  "devices": {
+    "xgboost": "cuda",
+    "catboost": "cpu"
+  }
+}

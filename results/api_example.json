@@ -1,0 +1,149 @@
+{
+  "request": {
+    "customers": [
+      {
+        "customerID": "0004-TLHLJ",
+        "gender": "Male",
+        "SeniorCitizen": 0,
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "Yes",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Electronic check",
+        "tenure": 4,
+        "MonthlyCharges": 73.9,
+        "TotalCharges": 280.85
+      },
+      {
+        "customerID": "0015-UOCOJ",
+        "gender": "Female",
+        "SeniorCitizen": 1,
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "DSL",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Electronic check",
+        "tenure": 7,
+        "MonthlyCharges": 48.2,
+        "TotalCharges": 340.35
+      },
+      {
+        "customerID": "0016-QLJIS",
+        "gender": "Female",
+        "SeniorCitizen": 0,
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "DSL",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "Yes",
+        "TechSupport": "Yes",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Two year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Mailed check",
+        "tenure": 65,
+        "MonthlyCharges": 90.45,
+        "TotalCharges": 5957.9
+      }
+    ]
+  },
+  "response": {
+    "model": "xgboost",
+    "predictions": [
+      {
+        "customerID": "0004-TLHLJ",
+        "churn_probability": 0.6381,
+        "risk_band": "high",
+        "expected_offer_value": 123.88,
+        "recommend_offer": true,
+        "top_reasons": [
+          {
+            "feature": "Contract",
+            "value": "Month-to-month",
+            "contribution": 0.5781
+          },
+          {
+            "feature": "tenure",
+            "value": "4",
+            "contribution": 0.3717
+          },
+          {
+            "feature": "InternetService",
+            "value": "Fiber optic",
+            "contribution": 0.2519
+          }
+        ]
+      },
+      {
+        "customerID": "0015-UOCOJ",
+        "churn_probability": 0.3701,
+        "risk_band": "medium",
+        "expected_offer_value": 23.51,
+        "recommend_offer": true,
+        "top_reasons": [
+          {
+            "feature": "Contract",
+            "value": "Month-to-month",
+            "contribution": 0.5345
+          },
+          {
+            "feature": "PaymentMethod",
+            "value": "Electronic check",
+            "contribution": 0.1815
+          },
+          {
+            "feature": "tenure",
+            "value": "7",
+            "contribution": 0.1729
+          }
+        ]
+      },
+      {
+        "customerID": "0016-QLJIS",
+        "churn_probability": 0.0206,
+        "risk_band": "low",
+        "expected_offer_value": -87.44,
+        "recommend_offer": false,
+        "top_reasons": [
+          {
+            "feature": "StreamingTV",
+            "value": "Yes",
+            "contribution": 0.0667
+          },
+          {
+            "feature": "StreamingMovies",
+            "value": "Yes",
+            "contribution": 0.059
+          },
+          {
+            "feature": "MultipleLines",
+            "value": "Yes",
+            "contribution": 0.0586
+          }
+        ]
+      }
+    ]
+  }
+}

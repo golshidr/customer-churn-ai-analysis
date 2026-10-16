@@ -1,0 +1,15 @@
+{
+  "model": "xgboost",
+  "removed": [
+    "gender",
+    "SeniorCitizen"
+  ],
+  "roc_auc_full": 0.8414811229428848,
+  "roc_auc_without_sensitive": 0.840258113277873,
+  "difference": {
+    "diff": -0.001223009665011765,
+    "ci_low": -0.0024942382285117804,
+    "ci_high": 6.349115873727203e-05,
+    "p_value": 0.062
+  }
+}

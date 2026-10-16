@@ -1,0 +1,12 @@
+.git
+data
+artifacts
+build
+logs
+notebooks
+figures
+results
+tests
+**/__pycache__
+models/*
+!models/churn_model.joblib

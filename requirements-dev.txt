@@ -1,0 +1,7 @@
+# Test, lint and notebook tooling (pinned)
+pytest==9.1.1
+ruff==0.17.1
+httpx==0.28.1
+jupyter==1.1.1
+nbconvert==7.17.2
+ipykernel==7.4.0

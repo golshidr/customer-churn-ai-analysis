@@ -1,0 +1,5 @@
+model,device,median_fit_seconds,n_jobs_cpu,n_rows
+xgboost,cpu,0.5597838386893272,8,5625
+xgboost,cuda,0.8594638183712959,8,5625
+catboost,cpu,1.3953960239887238,8,5625
+catboost,cuda,11.92691508680582,8,5625

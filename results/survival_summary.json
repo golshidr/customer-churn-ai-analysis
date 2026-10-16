@@ -1,0 +1,16 @@
+{
+  "n_customers": 7032,
+  "n_events": 1869,
+  "cox_c_index_train": 0.8682736451425657,
+  "cox_c_index_test": 0.8516023718172305,
+  "cox_stratified_by_contract_c_index_test": 0.8142546215556331,
+  "ph_violations_bonferroni": [
+    "Contract=One year",
+    "MultipleLines=Yes",
+    "PaymentMethod=Bank transfer (automatic)",
+    "PaymentMethod=Credit card (automatic)",
+    "StreamingTV=Yes",
+    "TechSupport=Yes"
+  ],
+  "penalizer": 0.01
+}

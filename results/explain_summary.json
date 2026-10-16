@@ -1,0 +1,162 @@
+{
+  "explained_model": "xgboost",
+  "output_space": "log-odds",
+  "additivity_max_abs_error": 4.76837158203125e-06,
+  "top_features": {
+    "Contract": 0.7106999754905701,
+    "tenure": 0.40459999442100525,
+    "InternetService": 0.2526000142097473,
+    "OnlineSecurity": 0.23890000581741333,
+    "MonthlyCharges": 0.22419999539852142,
+    "TechSupport": 0.17000000178813934,
+    "PaymentMethod": 0.15360000729560852,
+    "TotalCharges": 0.13940000534057617,
+    "MultipleLines": 0.10670000314712524,
+    "PaperlessBilling": 0.09920000284910202
+  },
+  "interaction_model": "xgboost",
+  "top_interactions": [
+    {
+      "feature_a": "Contract",
+      "feature_b": "tenure",
+      "mean_abs_interaction": 0.0788
+    },
+    {
+      "feature_a": "InternetService",
+      "feature_b": "Contract",
+      "mean_abs_interaction": 0.0583
+    },
+    {
+      "feature_a": "Contract",
+      "feature_b": "TotalCharges",
+      "mean_abs_interaction": 0.0456
+    },
+    {
+      "feature_a": "OnlineSecurity",
+      "feature_b": "tenure",
+      "mean_abs_interaction": 0.0454
+    },
+    {
+      "feature_a": "tenure",
+      "feature_b": "MonthlyCharges",
+      "mean_abs_interaction": 0.0334
+    }
+  ],
+  "importance_rank_correlation": {
+    "spearman_impurity_vs_shap": 0.8473684210526315,
+    "spearman_impurity_vs_permutation": 0.512280701754386,
+    "spearman_permutation_vs_shap": 0.6614035087719298,
+    "gender_ranks": {
+      "impurity_rank": 12,
+      "permutation_rank": 13,
+      "shap_rank": 16
+    }
+  },
+  "customer_reports": [
+    {
+      "customerID": "5178-LMXOP",
+      "probability": 0.9073426723480225,
+      "reasons": [
+        {
+          "feature": "tenure",
+          "value": "1",
+          "contribution": 0.8155829906463623
+        },
+        {
+          "feature": "Contract",
+          "value": "Month-to-month",
+          "contribution": 0.5986436605453491
+        },
+        {
+          "feature": "TotalCharges",
+          "value": "95.10",
+          "contribution": 0.2871980369091034
+        }
+      ]
+    },
+    {
+      "customerID": "1069-XAIEM",
+      "probability": 0.8992316126823425,
+      "reasons": [
+        {
+          "feature": "tenure",
+          "value": "1",
+          "contribution": 0.853265643119812
+        },
+        {
+          "feature": "Contract",
+          "value": "Month-to-month",
+          "contribution": 0.6335241198539734
+        },
+        {
+          "feature": "TotalCharges",
+          "value": "85.05",
+          "contribution": 0.30302003026008606
+        }
+      ]
+    },
+    {
+      "customerID": "6521-YYTYI",
+      "probability": 0.8775944709777832,
+      "reasons": [
+        {
+          "feature": "tenure",
+          "value": "1",
+          "contribution": 0.8417752385139465
+        },
+        {
+          "feature": "Contract",
+          "value": "Month-to-month",
+          "contribution": 0.6093341112136841
+        },
+        {
+          "feature": "TotalCharges",
+          "value": "93.30",
+          "contribution": 0.2897769808769226
+        }
+      ]
+    },
+    {
+      "customerID": "6861-XWTWQ",
+      "probability": 0.8719788193702698,
+      "reasons": [
+        {
+          "feature": "Contract",
+          "value": "Month-to-month",
+          "contribution": 0.5667340159416199
+        },
+        {
+          "feature": "MonthlyCharges",
+          "value": "99.25",
+          "contribution": 0.4399241507053375
+        },
+        {
+          "feature": "tenure",
+          "value": "7",
+          "contribution": 0.34399163722991943
+        }
+      ]
+    },
+    {
+      "customerID": "9057-SIHCH",
+      "probability": 0.8704898953437805,
+      "reasons": [
+        {
+          "feature": "Contract",
+          "value": "Month-to-month",
+          "contribution": 0.5811614990234375
+        },
+        {
+          "feature": "tenure",
+          "value": "3",
+          "contribution": 0.46993589401245117
+        },
+        {
+          "feature": "MonthlyCharges",
+          "value": "96.60",
+          "contribution": 0.36706429719924927
+        }
+      ]
+    }
+  ]
+}

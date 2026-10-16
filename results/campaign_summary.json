@@ -1,0 +1,21 @@
+{
+  "n_simulations": 2000,
+  "acceptance_prior_beta": [
+    6.0,
+    14.0
+  ],
+  "best_budget_share_model": 0.4,
+  "best_budget_mean_per_1000": 35327.751883439945,
+  "best_budget_90pct_interval": [
+    7856.743070362472,
+    65427.258351101635
+  ],
+  "best_budget_prob_loss": 0.011,
+  "random_same_budget_mean_per_1000": 6035.618852167733,
+  "ev_rule_share": 0.4314143567874911,
+  "ev_rule_mean_per_1000": 35295.89434968017,
+  "ev_rule_90pct_interval": [
+    7026.906538734899,
+    66870.93461265102
+  ]
+}

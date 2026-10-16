@@ -1,0 +1,33 @@
+# Fast end-to-end smoke run on synthetic data (used by CI and `make smoke`).
+# Outputs go to build/smoke/ so they never overwrite the real results.
+synthetic:
+  n: 800
+  seed: 0
+
+paths:
+  results: build/smoke/results
+  figures: build/smoke/figures
+  models: build/smoke/models
+  artifacts: build/smoke/artifacts
+
+compute:
+  device: cpu
+  n_jobs: 2
+
+cv:
+  n_splits: 3
+
+tuning:
+  n_trials: 3
+  timeout_per_model: 120
+
+evaluation:
+  n_bootstrap: 100
+
+campaign:
+  n_simulations: 100
+
+explain:
+  n_customer_reports: 2
+  interaction_sample: 100
+  permutation_repeats: 2

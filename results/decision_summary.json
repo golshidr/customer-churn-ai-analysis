@@ -1,0 +1,20 @@
+{
+  "selected_model": "xgboost",
+  "ev_rule_vs_threshold_05_profit_per_1000": {
+    "diff": 6251.666666666667,
+    "ci_low": 2380.5743603411515,
+    "ci_high": 10163.714729921816,
+    "p_value": 0.001
+  },
+  "calibration_chosen": "uncalibrated",
+  "profit_optimal_threshold": 0.215,
+  "assumptions": {
+    "horizon_months": 12,
+    "incentive_months": 1.0,
+    "contact_cost": 5.0,
+    "acceptance_rate": 0.3
+  },
+  "test_customers": 1407,
+  "ece_uncalibrated": 0.023862686874911155,
+  "ece_chosen": 0.023862686874911155
+}

@@ -1,0 +1,4 @@
+variable,test_statistic,degrees_of_freedom,p_value
+Contract,2352.872538259339,2,0.0
+InternetService,520.1206081845039,2,1.1408931448716352e-113
+PaymentMethod,865.239463132398,3,3.0665292229500084e-187

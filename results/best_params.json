@@ -1,0 +1,47 @@
+{
+  "dummy": {},
+  "rf_original": {
+    "n_estimators": 200
+  },
+  "logreg": {
+    "C": 7.961599148808649,
+    "class_weight": null
+  },
+  "random_forest": {
+    "n_estimators": 800,
+    "max_depth": 13,
+    "min_samples_leaf": 23,
+    "max_features": 0.21442428636076066,
+    "class_weight": "balanced_subsample"
+  },
+  "xgboost": {
+    "n_estimators": 1250,
+    "learning_rate": 0.011047029849713869,
+    "max_depth": 7,
+    "min_child_weight": 19.91371504091177,
+    "subsample": 0.5674273604613683,
+    "colsample_bytree": 0.5112611228840173,
+    "reg_lambda": 0.03022596377648789,
+    "reg_alpha": 0.026359317762778476,
+    "gamma": 3.814362525132953
+  },
+  "lightgbm": {
+    "n_estimators": 250,
+    "learning_rate": 0.030674781561000737,
+    "num_leaves": 5,
+    "min_child_samples": 53,
+    "subsample": 0.5259643214511048,
+    "colsample_bytree": 0.6837188421879705,
+    "reg_lambda": 0.01880804519178321,
+    "reg_alpha": 0.8204775678635651,
+    "subsample_freq": 1
+  },
+  "catboost": {
+    "iterations": 850,
+    "learning_rate": 0.011709160267030738,
+    "depth": 3,
+    "l2_leaf_reg": 4.804397581341407,
+    "random_strength": 3.9008339396311498,
+    "bagging_temperature": 0.978095052962773
+  }
+}

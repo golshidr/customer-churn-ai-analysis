@@ -1,0 +1,23 @@
+{
+  "n_rows": 7032,
+  "n_features": 30,
+  "test_size": 1407,
+  "accuracy": 0.7917555081734187,
+  "majority_class_accuracy": 0.7341862117981521,
+  "roc_auc": 0.8189518613042329,
+  "churn_precision": 0.6451612903225806,
+  "churn_recall": 0.48128342245989303,
+  "churn_f1": 0.5513016845329249,
+  "top10_impurity_importance": {
+    "TotalCharges": 0.1958,
+    "MonthlyCharges": 0.1682,
+    "tenure": 0.1673,
+    "InternetService_Fiber optic": 0.0387,
+    "PaymentMethod_Electronic check": 0.0358,
+    "Contract_Two year": 0.0297,
+    "gender_Male": 0.0279,
+    "OnlineSecurity_Yes": 0.0272,
+    "PaperlessBilling_Yes": 0.0247,
+    "TechSupport_Yes": 0.0245
+  }
+}

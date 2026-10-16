@@ -1,0 +1,77 @@
+# Default configuration for the full pipeline (`make all` / `churn all`).
+# Paths are relative to the repository root.
+
+seed: 42
+
+paths:
+  raw_data: data/raw/telco_customer_churn.csv
+  results: results
+  figures: figures
+  models: models
+  artifacts: artifacts
+
+data:
+  # 11 customers have tenure 0 and a blank TotalCharges. The original notebook dropped
+  # them; keep that behaviour so results stay comparable.
+  drop_missing_total_charges: true
+
+split:
+  test_size: 0.2
+  stratify: true
+
+cv:
+  n_splits: 5
+
+compute:
+  device: auto        # auto | cpu | cuda  (used by XGBoost; and CatBoost unless overridden)
+  # CatBoost on GPU was 7-8x slower than on 8 CPU threads for this 7k-row table, so it is
+  # tuned on CPU. The GPU/CPU timing table (results/gpu_cpu_timing.csv) still measures both.
+  catboost_device: cpu
+  n_jobs: 8           # CPU threads per model; keep modest on shared machines
+
+tuning:
+  n_trials: 60        # Optuna trials per model
+  timeout_per_model: 2400   # seconds
+  models: [logreg, random_forest, xgboost, lightgbm, catboost]
+
+evaluation:
+  n_bootstrap: 2000
+  threshold: 0.5
+  reference_model: logreg   # paired bootstrap differences are reported against this model
+
+calibration:
+  methods: [sigmoid, isotonic]
+  n_bins: 10
+
+# Retention-campaign economics. These are illustrative assumptions, not estimates from
+# the data; every result that depends on them says so. Change them to match a real offer.
+business:
+  horizon_months: 12      # value of retaining a customer = horizon_months * MonthlyCharges
+  incentive_months: 1.0   # incentive = incentive_months * MonthlyCharges (paid if accepted)
+  contact_cost: 5.0       # cost per contacted customer, in the same currency as MonthlyCharges
+  acceptance_rate: 0.30   # probability that a would-be churner accepts and stays
+
+campaign:
+  n_simulations: 2000
+  budget_fractions: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50, 0.75, 1.00]
+  acceptance_prior: [6.0, 14.0]     # Beta(a, b) prior on the acceptance rate (mean 0.30)
+  sensitivity_acceptance: [0.10, 0.20, 0.30, 0.40, 0.50]
+  sensitivity_incentive_months: [0.5, 1.0, 2.0, 3.0]
+
+survival:
+  penalizer: 0.01
+  groups: [Contract, InternetService, PaymentMethod]
+  rmst_horizon: 72
+
+explain:
+  model: auto_tree       # best tree model by CV ROC-AUC, or a model name
+  n_customer_reports: 5
+  interaction_sample: 600
+  permutation_repeats: 20
+
+fairness:
+  attributes: [gender, SeniorCitizen, Partner, Dependents]
+  sensitive_features: [gender, SeniorCitizen]   # dropped in the "unaware" ablation
+
+serving:
+  bundle_name: churn_model.joblib

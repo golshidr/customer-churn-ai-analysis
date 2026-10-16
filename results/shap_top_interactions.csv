@@ -1,0 +1,16 @@
+feature_a,feature_b,mean_abs_interaction
+Contract,tenure,0.07877063006162643
+InternetService,Contract,0.058271683752536774
+Contract,TotalCharges,0.045649578794837
+OnlineSecurity,tenure,0.045369815081357956
+tenure,MonthlyCharges,0.0333948340266943
+StreamingMovies,Contract,0.03079302702099085
+PaymentMethod,tenure,0.03064423520117998
+OnlineSecurity,Contract,0.02712529618293047
+InternetService,tenure,0.025281794369220734
+Contract,PaperlessBilling,0.023777219466865063
+InternetService,OnlineSecurity,0.022890768945217133
+MonthlyCharges,TotalCharges,0.02245912980288267
+Contract,MonthlyCharges,0.021550815552473068
+TechSupport,Contract,0.021415154449641705
+MultipleLines,Contract,0.02108048088848591

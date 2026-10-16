@@ -1,3 +1,17 @@
+# --- project ---------------------------------------------------------------
+# downloaded dataset (run `make data`)
+data/
+# fitted models and the API bundle (run `make benchmark export`)
+models/
+# intermediate predictions shared between stages
+artifacts/
+# smoke-run outputs and logs
+build/
+logs/
+*.joblib
+*.pkl
+catboost_info/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
